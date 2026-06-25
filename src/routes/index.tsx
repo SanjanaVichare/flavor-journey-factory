@@ -9,6 +9,11 @@ import { Nutrition } from "@/components/site/Nutrition";
 import { WhySamarth } from "@/components/site/WhySamarth";
 import { FlavorWheel } from "@/components/site/FlavorWheel";
 import { FinalCTA } from "@/components/site/FinalCTA";
+import { WhyChooseUs } from "@/components/site/WhyChooseUs";
+import { Testimonials } from "@/components/site/Testimonials";
+import { InstagramGallery } from "@/components/site/InstagramGallery";
+import { Newsletter } from "@/components/site/Newsletter";
+import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,7 +39,12 @@ function Index() {
       <Nutrition />
       <WhySamarth />
       <FlavorWheel />
+      <WhyChooseUs />
+      <Testimonials />
+      <InstagramGallery />
+      <Newsletter />
       <FinalCTA />
+      <Footer />
     </main>
   );
 }
