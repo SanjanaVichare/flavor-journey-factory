@@ -173,6 +173,19 @@ function ProductPage() {
                 </ul>
               </div>
             </div>
+
+            {product.category === "Makhana" && (
+              <div className="mt-6 rounded-2xl bg-card border border-ink/5 p-5 text-sm text-ink/70">
+                <h3 className="text-xs uppercase tracking-[0.2em] text-brand-green font-semibold mb-3">Packaging & Origin</h3>
+                <dl className="grid sm:grid-cols-2 gap-y-2 gap-x-6">
+                  <div className="flex justify-between border-b border-ink/5 pb-2"><dt className="text-ink/60">Net Weight</dt><dd className="font-semibold text-ink">90 g</dd></div>
+                  <div className="flex justify-between border-b border-ink/5 pb-2"><dt className="text-ink/60">Sticker Size</dt><dd className="font-semibold text-ink">240 × 68 mm</dd></div>
+                  <div className="flex justify-between border-b border-ink/5 pb-2"><dt className="text-ink/60">Pouch</dt><dd className="font-semibold text-ink">6.5 × 9.5 in standup</dd></div>
+                  <div className="flex justify-between border-b border-ink/5 pb-2"><dt className="text-ink/60">Manufactured by</dt><dd className="font-semibold text-ink">Shee Food</dd></div>
+                  <div className="flex justify-between border-b border-ink/5 pb-2 sm:col-span-2"><dt className="text-ink/60">Marketed by</dt><dd className="font-semibold text-ink">Samartha Makhana</dd></div>
+                </dl>
+              </div>
+            )}
           </div>
         </div>
 
