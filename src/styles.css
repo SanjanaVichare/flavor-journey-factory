@@ -167,6 +167,15 @@
     font-family: "Inter Tight", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    background-image: url("/__l5e/assets-v1/91346872-02b5-406f-8941-910ccc0871b8/cookie-pattern.png");
+    background-repeat: repeat;
+    background-size: 720px auto;
+    background-attachment: fixed;
+    cursor: url("/__l5e/assets-v1/cdfef267-6741-4ac8-b200-136b4e45ee76/makhana-cursor-32.png") 16 16, auto;
+  }
+
+  a, button, [role="button"], input[type="submit"], label, summary {
+    cursor: url("/__l5e/assets-v1/cdfef267-6741-4ac8-b200-136b4e45ee76/makhana-cursor-32.png") 16 16, pointer;
   }
 
   h1, h2, h3, h4, .font-display {
