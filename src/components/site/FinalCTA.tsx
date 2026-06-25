@@ -26,12 +26,6 @@ export function FinalCTA() {
       ))}
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-          className="text-sm uppercase tracking-[0.4em] text-gold mb-6"
-        >
-          ✦ Snack Smarter ✦
-        </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           transition={{ duration: 0.8 }}

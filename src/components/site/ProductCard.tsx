@@ -9,6 +9,13 @@ import { QuickViewDialog } from "./QuickViewDialog";
 export function ProductCard({ product, index = 0 }: { product: Product; index?: number }) {
   const { add } = useCart();
   const [quick, setQuick] = useState(false);
+  const [selectedSize, setSelectedSize] = useState<"100g" | "250g" | "500g">("100g");
+
+  const sizeToImageKey = {
+    "100g": "small",
+    "250g": "medium",
+    "500g": "large"
+  } as const;
 
   return (
     <>
@@ -39,8 +46,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
           aria-label={`View ${product.name}`}
         >
           <img
-            src={product.image}
-            alt={product.name}
+            src={product.images[sizeToImageKey[selectedSize]]}
             loading="lazy"
             className="absolute inset-0 m-auto w-3/4 h-3/4 object-contain drop-packet transition-transform duration-700 group-hover:scale-110 group-hover:rotate-2"
           />
@@ -75,17 +81,49 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
             </Link>
           </h3>
           <p className="mt-2 text-sm text-ink/60 line-clamp-2">{product.short}</p>
-          <div className="mt-4 flex items-center justify-between gap-3">
-            <p className="font-display text-2xl text-ink">₹{product.price}</p>
-            <button
-              type="button"
-              onClick={() => add({ id: product.id, name: product.name, price: product.price, image: product.image })}
-              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] bg-brand-green text-cream rounded-full px-4 py-2.5 hover:bg-ink transition-colors"
-              aria-label={`Add ${product.name} to cart`}
-            >
-              <ShoppingCart className="h-3.5 w-3.5" />
-              Add
-            </button>
+
+          <div className="mt-4">
+            {/* Size Buttons - Only for Makhana */}
+            {product.category === "Makhana" && (
+              <div className="flex gap-2 mb-4">
+                {(["100g", "250g", "500g"] as const).map((size) => (
+                  <button
+                    key={size}
+                    type="button"
+                    onMouseEnter={() => setSelectedSize(size)}
+                    className={`rounded-full border px-3 py-1 text-xs font-semibold transition
+                      ${selectedSize === size
+                        ? "bg-brand-green text-white border-brand-green"
+                        : "border-brand-green text-brand-green hover:bg-brand-green hover:text-white"
+                      }`}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            <div className="flex items-center justify-between">
+              <p className="font-display text-2xl text-ink">
+                ₹{product.prices[selectedSize]}
+              </p>
+
+              <button
+                type="button"
+                onClick={() =>
+                  add({
+                    id: product.id,
+                    name: product.name,
+                    price: product.prices[selectedSize],
+                    image: product.images[sizeToImageKey[selectedSize]],
+                  })
+                }
+                className="inline-flex items-center gap-2 rounded-full bg-brand-green px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] text-cream transition-colors hover:bg-ink"
+              >
+                <ShoppingCart className="h-3.5 w-3.5" />
+                Add
+              </button>
+            </div>
           </div>
         </div>
       </motion.article>

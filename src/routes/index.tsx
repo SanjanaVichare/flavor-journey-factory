@@ -12,6 +12,7 @@ import { Testimonials } from "@/components/site/Testimonials";
 import { InstagramGallery } from "@/components/site/InstagramGallery";
 import { Newsletter } from "@/components/site/Newsletter";
 import { Footer } from "@/components/site/Footer";
+import FloatingWhatsApp from "@/components/site/FloatingWhatsApp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,6 +41,7 @@ function Index() {
       <InstagramGallery />
       <Newsletter />
       <FinalCTA />
+      <FloatingWhatsApp />
       <Footer />
     </main>
   );

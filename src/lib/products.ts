@@ -14,6 +14,16 @@ export type Product = {
   rating: number;
   image: string;
   short: string;
+  images: {
+    small: string;
+    medium: string;
+    large: string;
+  };
+  prices: {
+    "100g": number;
+    "250g": number;
+    "500g": number;
+  };
   description: string;
   ingredients: string[];
   nutrition: { label: string; value: string }[];
@@ -25,9 +35,19 @@ export const products: Product[] = [
     id: "peri-peri",
     name: "Peri Peri Makhana",
     category: "Makhana",
-    price: 199,
     rating: 4.8,
+    images: {
+      small: peri,
+      medium: peri,
+      large: peri,
+    },
+    prices: {
+      "100g": 199,
+      "250g": 349,
+      "500g": 599,
+    },
     image: peri,
+    price: 199,
     short: "Bold, fiery and unapologetically spicy.",
     description:
       "Hand-tossed in our signature peri peri blend with smoked paprika and African bird's eye chili. Roasted, never fried.",
@@ -44,9 +64,19 @@ export const products: Product[] = [
     id: "cheese",
     name: "Cheese Makhana",
     category: "Makhana",
-    price: 199,
     rating: 4.7,
+    images: {
+      small: cheese,
+      medium: cheese,
+      large: cheese,
+    },
+    prices: {
+      "100g": 199,
+      "250g": 349,
+      "500g": 599,
+    },
     image: cheese,
+    price: 199,
     short: "Golden, creamy and comfort-food good.",
     description:
       "Real cheese powder hugs every puff for the kind of indulgence your snack drawer has been missing.",
@@ -63,9 +93,19 @@ export const products: Product[] = [
     id: "pudina",
     name: "Pudina Makhana",
     category: "Makhana",
-    price: 199,
     rating: 4.6,
+    images: {
+      small: pudina,
+      medium: pudina,
+      large: pudina,
+    },
+    prices: {
+      "100g": 199,
+      "250g": 349,
+      "500g": 599,
+    },
     image: pudina,
+    price: 199,
     short: "Cool, fresh and garden-bright.",
     description: "Slow-dried mint, chaat masala and a whisper of citrus. The cleanest snack in the room.",
     ingredients: ["Fox nuts", "Mint", "Chaat masala", "Sunflower oil", "Sea salt"],
@@ -81,9 +121,19 @@ export const products: Product[] = [
     id: "cream-onion",
     name: "Cream & Onion Makhana",
     category: "Makhana",
-    price: 199,
     rating: 4.5,
+    images: {
+      small: creamOnion,
+      medium: creamOnion,
+      large: creamOnion,
+    },
+    prices: {
+      "100g": 199,
+      "250g": 349,
+      "500g": 599,
+    },
     image: creamOnion,
+    price: 199,
     short: "Smooth, savoury and pleasantly addictive.",
     description: "Sweet caramelised onion meets dairy cream for the comfort flavour we all secretly love.",
     ingredients: ["Fox nuts", "Onion powder", "Milk solids", "Sunflower oil", "Sea salt"],
@@ -99,9 +149,19 @@ export const products: Product[] = [
     id: "salt-pepper",
     name: "Salt & Pepper Makhana",
     category: "Makhana",
-    price: 189,
     rating: 4.4,
+    images: {
+      small: saltPepper,
+      medium: saltPepper,
+      large: saltPepper,
+    },
+    prices: {
+      "100g": 189,
+      "250g": 329,
+      "500g": 569,
+    },
     image: saltPepper,
+    price: 189,
     short: "Classic. Sharp. Endlessly snackable.",
     description: "Crushed Tellicherry pepper and Himalayan pink salt — minimal ingredients, maximal flavour.",
     ingredients: ["Fox nuts", "Black pepper", "Pink salt", "Sunflower oil"],
@@ -117,9 +177,19 @@ export const products: Product[] = [
     id: "chat-pata",
     name: "Chat Pata Makhana",
     category: "Makhana",
-    price: 199,
     rating: 4.9,
+    images: {
+      small: chatPata,
+      medium: chatPata,
+      large: chatPata,
+    },
+    prices: {
+      "100g": 199,
+      "250g": 349,
+      "500g": 599,
+    },
     image: chatPata,
+    price: 199,
     short: "Street-style chaat in every handful.",
     description: "Tamarind, kala namak and roasted cumin — the unmistakable taste of Indian street corners.",
     ingredients: ["Fox nuts", "Tamarind", "Kala namak", "Roasted cumin", "Sunflower oil"],
@@ -135,9 +205,19 @@ export const products: Product[] = [
     id: "classic-cookies",
     name: "Classic Makhana Cookies",
     category: "Cookies",
-    price: 249,
     rating: 4.7,
+    images: {
+      small: cookie,
+      medium: cookie,
+      large: cookie,
+    },
+    prices: {
+      "100g": 249,
+      "250g": 449,
+      "500g": 749,
+    },
     image: cookie,
+    price: 249,
     short: "Baked with makhana, real butter and zero shortcuts.",
     description: "Crisp on the edge, soft in the middle. A teacup essential.",
     ingredients: ["Whole wheat flour", "Makhana flour", "Butter", "Cane sugar", "Vanilla"],
@@ -153,9 +233,19 @@ export const products: Product[] = [
     id: "sugar-free-cookies",
     name: "Sugar Free Cookies",
     category: "Cookies",
-    price: 269,
     rating: 4.6,
+    images: {
+      small: cookie,
+      medium: cookie,
+      large: cookie,
+    },
+    prices: {
+      "100g": 269,
+      "250g": 469,
+      "500g": 769,
+    },
     image: cookie,
+    price: 269,
     short: "All the comfort, none of the sugar.",
     description: "Sweetened with stevia and dates — perfect for the everyday tea ritual.",
     ingredients: ["Whole wheat flour", "Makhana flour", "Butter", "Dates", "Stevia"],
