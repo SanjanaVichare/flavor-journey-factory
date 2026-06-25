@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Minus, Plus, ShoppingCart, Star, Zap } from "lucide-react";
@@ -10,30 +10,40 @@ import { useCart } from "@/lib/cart-context";
 import { useLenis } from "@/lib/use-lenis";
 
 export const Route = createFileRoute("/product/$id")({
-  loader: ({ params }) => {
-    const product = getProduct(params.id);
-    if (!product) throw notFound();
-    return { product };
-  },
-  head: ({ loaderData }) => ({
-    meta: [{ title: `${loaderData?.product.name ?? "Product"} · Samarth` }],
-  }),
+  head: () => ({ meta: [{ title: "Product · Samarth" }] }),
   component: ProductPage,
 });
 
 function ProductPage() {
   useLenis();
-  const { product } = Route.useLoaderData();
+  const { id } = Route.useParams();
+  const product = getProduct(id);
   const { add } = useCart();
   const navigate = Route.useNavigate();
   const [qty, setQty] = useState(1);
   const [active, setActive] = useState(0);
 
-  const gallery = useMemo(() => [product.image, product.image, product.image, product.image], [product]);
-  const related = useMemo(
-    () => products.filter((p) => p.id !== product.id && p.category === product.category).slice(0, 4),
+  const gallery = useMemo(
+    () => (product ? [product.image, product.image, product.image, product.image] : []),
     [product],
   );
+  const related = useMemo(
+    () => (product ? products.filter((p) => p.id !== product.id && p.category === product.category).slice(0, 4) : []),
+    [product],
+  );
+
+  if (!product) {
+    return (
+      <main className="bg-cream text-ink min-h-screen">
+        <Nav />
+        <div className="pt-44 pb-24 text-center px-6">
+          <h1 className="font-display text-5xl">Product not found</h1>
+          <Link to="/shop" className="inline-block mt-8 bg-brand-green text-cream rounded-full px-7 py-3 text-xs font-semibold uppercase tracking-[0.2em]">Back to Shop</Link>
+        </div>
+        <Footer />
+      </main>
+    );
+  }
 
   return (
     <main className="bg-cream text-ink min-h-screen">
