@@ -65,26 +65,37 @@
   --radius: 0.5rem;
 
   /* Brand palette */
-  --cream: oklch(0.965 0.025 92);              /* #FAF6E9 */
+  --cream: oklch(0.965 0.025 92);
+  /* #FAF6E9 */
   --cream-deep: oklch(0.93 0.04 88);
-  --brand-green: oklch(0.38 0.07 145);         /* deep forest */
-  --brand-green-deep: oklch(0.46 0.09 130);    /* #4D622C-ish */
+  --brand-green: oklch(0.38 0.07 145);
+  /* deep forest */
+  --brand-green-deep: oklch(0.46 0.09 130);
+  /* #4D622C-ish */
   --gold: oklch(0.78 0.13 82);
   --gold-soft: oklch(0.88 0.09 88);
-  --ink: oklch(0.22 0.03 100);
+  --ink: oklch(22.08% 0.05881 131.854);
 
   /* Flavor palette */
-  --flavor-peri: oklch(0.66 0.21 35);          /* orange red */
-  --flavor-cheese: oklch(0.84 0.16 90);        /* golden yellow */
-  --flavor-chatpata: oklch(0.40 0.10 45);      /* dark chili brown */
-  --flavor-creamonion: oklch(0.42 0.13 305);   /* deep purple */
-  --flavor-pudina: oklch(0.72 0.16 145);       /* fresh green */
-  --flavor-saltpepper: oklch(0.30 0.07 260);   /* navy */
-  --flavor-cookie: oklch(0.38 0.08 55);        /* chocolate */
-  --flavor-sugarfree: oklch(0.58 0.13 245);    /* blue */
+  --flavor-peri: oklch(0.66 0.21 35);
+  /* orange red */
+  --flavor-cheese: oklch(0.84 0.16 90);
+  /* golden yellow */
+  --flavor-chatpata: oklch(0.40 0.10 45);
+  /* dark chili brown */
+  --flavor-creamonion: oklch(0.42 0.13 305);
+  /* deep purple */
+  --flavor-pudina: oklch(0.72 0.16 145);
+  /* fresh green */
+  --flavor-saltpepper: oklch(0.30 0.07 260);
+  /* navy */
+  --flavor-cookie: oklch(0.38 0.08 55);
+  /* chocolate */
+  --flavor-sugarfree: oklch(0.58 0.13 245);
+  /* blue */
 
   --shadow-packet: 0 60px 80px -30px color-mix(in oklab, var(--ink) 35%, transparent),
-                   0 20px 30px -10px color-mix(in oklab, var(--ink) 25%, transparent);
+    0 20px 30px -10px color-mix(in oklab, var(--ink) 25%, transparent);
   --shadow-soft: 0 20px 40px -20px color-mix(in oklab, var(--brand-green) 30%, transparent);
 
   --background: var(--cream);
@@ -167,18 +178,27 @@
     font-family: "Inter Tight", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    background-image: url("/__l5e/assets-v1/91346872-02b5-406f-8941-910ccc0871b8/cookie-pattern.png");
+    background-image: url("src/assets/cookie-pattern.png");
     background-repeat: repeat;
     background-size: 720px auto;
     background-attachment: fixed;
-    cursor: url("/__l5e/assets-v1/cdfef267-6741-4ac8-b200-136b4e45ee76/makhana-cursor-32.png") 16 16, auto;
+    cursor: url("/src/assets/makhana-cursor.png") 16 16, auto;
   }
 
-  a, button, [role="button"], input[type="submit"], label, summary {
-    cursor: url("/__l5e/assets-v1/cdfef267-6741-4ac8-b200-136b4e45ee76/makhana-cursor-32.png") 16 16, pointer;
+  a,
+  button,
+  [role="button"],
+  input[type="submit"],
+  label,
+  summary {
+    cursor: url("/src/assets/makhana-cursor.png") 16 16, pointer;
   }
 
-  h1, h2, h3, h4, .font-display {
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
     font-family: "Fraunces", "Times New Roman", serif;
     font-optical-sizing: auto;
     letter-spacing: -0.02em;
@@ -217,6 +237,7 @@
 
 @utility grain {
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -224,7 +245,7 @@
     pointer-events: none;
     opacity: 0.05;
     mix-blend-mode: multiply;
-    background-image: radial-gradient(rgba(0,0,0,0.6) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.6) 1px, transparent 1px);
     background-size: 3px 3px;
   }
 }
