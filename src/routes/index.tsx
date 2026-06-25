@@ -7,9 +7,7 @@ import { Journey } from "@/components/site/Journey";
 import { Cookies } from "@/components/site/Cookies";
 import { Nutrition } from "@/components/site/Nutrition";
 import { WhySamarth } from "@/components/site/WhySamarth";
-import { FlavorWheel } from "@/components/site/FlavorWheel";
 import { FinalCTA } from "@/components/site/FinalCTA";
-import { WhyChooseUs } from "@/components/site/WhyChooseUs";
 import { Testimonials } from "@/components/site/Testimonials";
 import { InstagramGallery } from "@/components/site/InstagramGallery";
 import { Newsletter } from "@/components/site/Newsletter";
@@ -38,8 +36,6 @@ function Index() {
       <Cookies />
       <Nutrition />
       <WhySamarth />
-      <FlavorWheel />
-      <WhyChooseUs />
       <Testimonials />
       <InstagramGallery />
       <Newsletter />
