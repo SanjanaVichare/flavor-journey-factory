@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import packet from "@/assets/packet-peri-peri.png";
+import packet from "@/assets/test.1.jpg";
 import makhana from "@/assets/makhana-piece.png";
 
 export function Hero() {

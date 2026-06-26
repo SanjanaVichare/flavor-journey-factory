@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
+.font-anton {
+  font-family: 'Anton', sans-serif;
+}
+.font-dm-serif {
+  font-family: "DM Serif Display", serif;
+}
 /*
  * Design system definition.
  *

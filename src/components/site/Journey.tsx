@@ -14,7 +14,7 @@ export function Journey() {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="journey" ref={ref} className="relative bg-cream-deep py-32 md:py-48 grain">
+    <section id="journey" ref={ref} className="relative bg-cream-deep py-32 md:py-36 grain">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-24">
           <p className="text-sm uppercase tracking-[0.4em] text-brand-green mb-4">The Journey</p>

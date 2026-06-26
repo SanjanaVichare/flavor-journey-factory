@@ -40,7 +40,7 @@ export function Nutrition() {
               transition={{ duration: 0.7, delay: i * 0.15 }}
               className="border-t border-brand-green/20 pt-8"
             >
-              <div className="font-display text-[18vw] md:text-[10vw] leading-none font-semibold text-brand-green tabular-nums">
+              <div className="font-dm-serif text-[18vw] md:text-[10vw] leading-none font-semibold text-brand-green tabular-nums">
                 <Counter to={s.value} suffix={s.suffix} />
               </div>
               <p className="font-display text-3xl mt-2 text-ink">{s.label}</p>

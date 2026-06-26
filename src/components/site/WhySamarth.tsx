@@ -16,7 +16,7 @@ export function WhySamarth() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20">
           <h2 className="font-display text-5xl md:text-7xl font-semibold text-ink max-w-2xl text-balance">
-            Why <em className="text-brand-green font-light italic">Samarth</em>
+            Why <em className="text-brand-green font-bold italic">Samarth</em>
           </h2>
           <p className="text-ink/60 max-w-md">Snacking should feel good — before, during and after. Here's what makes our makhana different.</p>
         </div>

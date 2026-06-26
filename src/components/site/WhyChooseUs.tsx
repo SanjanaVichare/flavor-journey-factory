@@ -15,7 +15,10 @@ export function WhyChooseUs() {
     <section className="bg-cream py-28 md:py-36">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-[0.4em] text-brand-green mb-4">Why Samarth</p>
+          <p className="text-sm uppercase tracking-[0.4em] text-brand-green mb-4">
+            <span className="font-normal">Why </span>
+            <span className="font-bold">Samarth</span>
+          </p>
           <h2 className="font-display text-5xl md:text-6xl font-semibold text-ink text-balance">
             Six reasons your snack drawer needs us
           </h2>
